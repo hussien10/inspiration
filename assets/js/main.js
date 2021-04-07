@@ -19,11 +19,13 @@ function createAuthors() {
     nonRepeatedAuthors = Array.from(new Set(authors))
 
 }
+// ****************************
 // function to get random number with range
 function rand(range) {
     var randNumber = Math.floor(Math.random() * range)
     return randNumber
 }
+// ****************************
 // real time search
 function updateResult(query) {
     resultList.innerHTML = "";
@@ -33,13 +35,9 @@ function updateResult(query) {
             resultList.innerHTML += `<li onclick="chooseAuthor(this)" class="list-group-item">${author}</li>`;
             result = document.querySelector(".list-group-item")
         }
-
-
     })
-
-    
-
 }
+// ****************************
 // function to get data from api and show it
 function getData() {
     const xhr = new XMLHttpRequest();
@@ -55,18 +53,18 @@ function getData() {
             } else {
                 getData()
             };
-
-            
         }
     });
     xhr.open("GET", "https://type.fit/api/quotes");
     xhr.send();
 }
+// ****************************
 // function to set the value of input
 function chooseAuthor(favAuthor) {
     search.value = favAuthor.textContent
     resultList.innerHTML = null
 }
+// ****************************
 // search
 function searchAuthor() {
     for (var i = 0; i < res.length; i++) {
@@ -77,7 +75,7 @@ function searchAuthor() {
     qouteBody.innerHTML = arr[rand(arr.length - 1)].text;
     qouteAuthor.innerHTML = arr[rand(arr.length - 1)].author;
     arr=[]
-    
 }
+// ****************************
 document.querySelector(".rand").addEventListener("click", getData)
 document.querySelector(".search-btn").addEventListener("click", searchAuthor)
