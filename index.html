@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="inspiration is the suitable place to pepole need inspirtion" />
+    <title>INSPIRATION</title>
+    <!-- styles -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <h1 class="logo">inspirtion</h1>
+    </nav>
+    <form>
+        <div>
+            <input oninput="updateResult(this.value)" class="search" type="text" placeholder="choose your favourite author"/>
+            <button type="button" class="search-btn">
+                <img src="assets/images/loupe.png" alt="search">
+            </button>
+        </div>
+        <ul class="search-result">
+
+        </ul>
+    </form>
+    <div class="qoutes">
+        <p class="qoute-body">
+            loading ...
+        </p>
+        <h2 class="qoute-author">
+            
+        </h2>
+    </div>
+    <div class="actions">
+        <button class="btn rand">get your inspire word</button>
+    </div>
+    <!-- scripts -->
+    <!-- custom script -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
